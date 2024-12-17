@@ -1,0 +1,51 @@
+.testimonial{
+    .card{
+        border: 1px solid var(--border-color);
+        background: linear-gradient(90deg, transparent, transparent, var(--light-bg-color));
+        background-size: 120% 100%;
+        gap: 15px;
+        display: flex;
+        max-width: 400px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .svg{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            padding: 5px;
+
+            svg{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: calc(var(--md-font) + 2px);
+            letter-spacing: 1px;
+        }
+        .avatar{
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: grey;
+
+            svg{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .name{
+            font-size: var(--base-font);
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+    .card:hover{
+        transform: translateY(-5px);
+        background-position: 100% 0;
+    }
+}

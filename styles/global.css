@@ -1,0 +1,92 @@
+:root {
+    /* Colors */
+    --background-color: #1a1a1a; /* Midnight Blue for dark background */
+    --primary-color: #E4E4E4; /* Diamond White */
+    --secondary-color: #E0115F; /* Ruby Red */
+    --accent-color: #9966CC; /* Amethyst Purple */
+    --highlight-color: #FFD700; /* Gold for highlights */
+
+    /* Additional Color Variations */
+    --light-bg-color: #333333; /* Slightly lighter background for sections */
+    --dark-bg-color: #111111; /* Darker background for footers/sidebars */
+    --text-color: #f0f0f0; /* Main text color (light for dark theme) */
+    --link-color: #E0115F; /* Link color, aligned with the highlight */
+    --border-color: #444444; /* Soft border color for card elements */
+    --primary-border:rgba(228, 228, 228, 0.5);
+    --secondary-border:rgba(224, 17, 96, 0.5);
+    --accent-border:rgba(153, 102, 204, 0.5);
+    
+    /* Font Sizes */
+    --base-font: 16px; /* Default font size */
+    --sm-font: 14px; /* Small text */
+    --md-font: 18px; /* Medium text */
+    --lg-font: 24px; /* Large headings or highlights */
+    --xlg-font:32px;
+
+    /* Font Families */
+    --primary-font: 'Helvetica Neue', sans-serif; /* Default font family */
+    --secondary-font: 'Roboto', sans-serif; /* For headers, titles, or bold text */
+
+    /* Spacing */
+    --base-spacing: 16px; /* For padding and margins */
+    --sm-spacing: 8px; /* Smaller spaces for subtle separations */
+    --md-spacing: 24px; /* Larger spacing for sections */
+    --lg-spacing: 32px; /* Extra spacing for large sections or modals */
+    
+
+    /* Buttons */
+    --btn-primary-bg:#FFD700; /* Ruby Red background for primary buttons */
+    --btn-secondary-bg: #9966CC; /* Amethyst Purple background for secondary buttons */
+    --btn-hover-bg: #E0115F; /* Gold for hover effects */
+    --btn-text-color: #fff; /* Button text color */
+    --bg-btn-spacing:15px 25px;/* Big Button Spacing */
+
+    /* Shadows & Effects */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for cards and elements */
+    --btn-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    transition: .3s ease;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 1.6rem;
+}
+body {
+    animation: enchantedBackground 15s infinite alternate ease-in-out;
+    background-size: 400% 400%;
+}
+.overlay{
+    border-image:fill 0 radial-gradient(circle,#00000000, #00000090, #000000ca, #000000) ;
+}
+
+@font-face {
+    font-family: 'Font-name';
+    src: url(File-Location) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+html::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Track color */
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #444; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #666; /* Thumb color on hover */
+}
+/* Firefox scrollbar customization */
+html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #444 #1a1a1a; /* Thumb color and track color */
+}

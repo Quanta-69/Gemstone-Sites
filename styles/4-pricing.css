@@ -1,0 +1,77 @@
+.pricing{
+    .wrapper{
+    }
+    
+    .card{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid transparent;
+        max-width: 370px;
+        padding-block: 30px;
+
+        h1{
+            color: var(--primary-color);
+        }
+
+        p{
+            font-size: var(--lg-font);
+
+            strong{
+                font-size: 40px;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: start;
+
+            li{
+                list-style-type:circle;
+            }
+        }
+    }
+    .card:hover{
+        transform: translateY(-5px) translateZ(0);
+    }
+    .amethyst{
+        border-color: var(--accent-color);
+        background: linear-gradient(-140deg, var(--accent-color), transparent, transparent);
+
+        strong{
+            color: var(--accent-color);
+        }
+        button{
+            background: var(--accent-color);
+        }
+    }
+    .diamond{
+        padding-block: 50px;
+        max-width: 400px;
+        border-color: var(--primary-color);
+        background: linear-gradient(-140deg, var(--primary-color), transparent, transparent);
+
+        strong{
+            color: var(--primary-color);
+        }
+        button{
+            background: var(--primary-color);
+            color: black;
+        }
+    }
+    .ruby{
+        border-color: var(--secondary-color);
+        background: linear-gradient(-140deg, var(--secondary-color), transparent, transparent);
+
+        strong{
+            color: var(--secondary-color);
+        }
+        button{
+            background: var(--secondary-color);
+        }
+    }
+}

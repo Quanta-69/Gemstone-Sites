@@ -1,0 +1,188 @@
+.about{
+    .card{
+            background: none;
+            max-width: 500px;
+
+            p{
+                font-size: calc(var(--md-font) + 4px);
+            }
+        }
+
+    .brand-mission{
+
+        .card{
+            box-shadow: none;
+            max-width:1500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .inner-card{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                
+                .inner-header, .inner-content{
+                    border: none;
+                }
+
+                .inner-header{
+                    width: 100%;
+                    max-width: 40%;
+
+                    h3{
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: var(--md-spacing);
+                        text-transform: uppercase;
+                        font-size: var(--lg-font);
+                        color: var(--secondary-color);
+
+                        span{
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            svg{
+                                height: 70px;
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+                .inner-content{
+                    width: 100%;
+                    max-width: 60%;
+
+                    p{
+                        padding: var(--sm-spacing);
+
+                        strong{
+                            font-size:var(--xlg-font);
+                            letter-spacing: 1px;
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+
+            }
+        }
+        .about-description .inner-header:hover span{
+            transform: translateX(5px);
+        }
+        .about-values .inner-header:hover span{
+            transform: translateX(-5px);
+        }
+
+        .about-values{
+
+            .inner-card{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    
+    .unique-template{
+
+        .card{
+            max-width: 370px;
+            background: linear-gradient(90deg, transparent, transparent, var(--light-bg-color));
+            background-size: 120% 100%;
+            border: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+
+            .svg{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                padding: var(--sm-spacing);
+
+                svg{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            h3{
+                text-align: center;
+                text-transform: uppercase;
+                color: var(--secondary-color);
+                font-size: var(--lg-font);
+            }
+
+            p{
+                text-align: center;
+            }
+        }
+        .card:hover{
+            transform: translateY(-5px);
+            background-position: 100% 0;
+        }
+    }
+
+    .our-team{
+
+        .card{
+            max-width: 410px;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(90deg, transparent, transparent, var(--light-bg-color));
+            background-size: 120% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            flex-direction: column;
+
+            .pic{
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .name{
+                font-size: var(--xlg-font);
+            }
+            .role{
+                text-transform: uppercase;
+                font-size: calc(var(--md-font) + 1px);
+                color: var(--secondary-color);
+            }
+            .intro{
+                text-align: center;
+                font-size: calc(var(--md-font) + 2px);
+            }
+            .links{
+                padding: var(--sm-spacing);
+
+                .link{
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.1);
+                    height: 45px;
+                    width: 4px;
+                    padding: var(--sm-spacing);
+                    transition: .3s;
+
+                    svg{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .link:hover{
+                    transform: translateY(-3px);
+                } 
+                
+            }
+        }
+        .card:hover{
+            transform: translateY(-5px);
+            background-position: 100% 0;
+        }
+    }
+}

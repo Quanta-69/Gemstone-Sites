@@ -1,0 +1,63 @@
+.faq{
+    .card{
+        padding: 0;
+        max-width: 600px;
+
+        button::before, button::after{
+            display: none;
+        }
+        button{
+            background: linear-gradient(40deg, var(--dark-bg-color), var(--secondary-color));
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: none;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            background-size: 200% 100%;
+            transition: .7s ease;
+
+            span{
+                transition: .15s ease;
+
+                svg{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+        button:hover{
+            transform: translateY(0);
+            background-position: 50% 50%;
+        }
+    }
+
+    .accordion-item {
+        margin-bottom: 0px;
+    }
+    .accordion-header {
+        background-color: transparent;
+        color: var(--primary-color);
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .accordion-content {
+        border-radius: 10px;
+        background: linear-gradient(-45deg, transparent, transparent, var(--light-bg-color));
+        padding: 10px;
+        background-color: transparent;
+        display: none;
+    }
+    
+    .accordion-header.active + .accordion-content {
+        display: block;
+    }
+    .accordion-header.active > span{
+        transform: rotate(90deg);
+    }
+}
