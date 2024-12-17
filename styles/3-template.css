@@ -21,28 +21,53 @@
                 color: black;
             }
         }
-
         .card{
-            background: radial-gradient(circle, transparent, transparent, var(--light-bg-color));
-            background-size: 120% 100%;
+            background: linear-gradient(180deg, transparent, transparent, var(--light-bg-color));
+            background-size: 100% 100%;
             padding-block: var(--lg-spacing);
             max-width: 450px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 40px;
+            gap: 20px;
+            overflow: hidden;
 
-            a{
+            .img{
                 width: 100%;
-                padding: var(--md-spacing);
+                padding-block: var(--md-spacing);
                 border-radius: 10px;
 
                 img{
+                    display: block;
                     border-radius: 10px;
-                    height: 200px;
+                    height: 220px;
                     width: 100%;
+                    object-fit: cover;
+                    transition: .5s ease;
                 }
+                img:hover{
+                    scale: 1.2;
+                }
+                .img-overlay{
+                    padding: var(--sm-spacing);
+                    border: 1px solid red;
+                    position: absolute;
+                    bottom: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: red; /* Semi-transparent black */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    transition: bottom 0.4s ease-in-out;
+                }
+            }
+            .img:hover .img-overlay{
+                bottom: 0;
             }
 
             .info{
@@ -59,6 +84,11 @@
                     border-radius: 50%;
                     padding: var(--sm-spacing);
                     background: rgba(255, 255, 255, 0.1);
+
+                    svg{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
                 .text-content{
                     width: 100%;
@@ -86,7 +116,7 @@
         }
         .card:hover{
             transform: translateY(-5px);
-            background-position: 50% 0;
+            background-position: 100% 0;
         }
     }
 }
