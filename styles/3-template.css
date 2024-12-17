@@ -21,11 +21,11 @@
                 color: black;
             }
         }
-        .cards{
-            display: grid;
+        .card-container{
+            display: grid !important;
             grid-template-columns: repeat(auto-fit, minmax(450px, .3fr));
             gap: 0px;
-            position: relative;
+            transition: all .5s ease;
         }
         .card{
             background: linear-gradient(180deg, transparent, transparent, var(--light-bg-color));
@@ -39,6 +39,7 @@
             gap: 20px;
             overflow: hidden;
             opacity: 1;
+            transition: opacity 0.5s ease, transform 0.5s ease;
 
             .img{
                 width: 100%;
@@ -125,17 +126,17 @@
             transform: translateY(-5px);
             background-position: 100% 0;
         }
-        /* Hidden cards: Scale down and disappear */
+        /* Hiding cards with opacity and movement animation */
         .card.hide {
-            transform: scale(0);
             opacity: 0;
+            transform: scale(0.8); /* Shrink effect */
             pointer-events: none;
         }
         
-        /* Visible cards: Restore original state */
+        /* Show cards */
         .card.show {
-            transform: scale(1);
             opacity: 1;
+            transform: scale(1);
         }
     }
 }
